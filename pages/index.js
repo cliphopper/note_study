@@ -63,10 +63,10 @@ export default function Home() {
 
         <Card>
           <Card.Body>
-            カードのサンプル1
+            カードのサンプルaa
           </Card.Body>
           <Card.Body>
-            カードのサンプル2
+            カードのサンプルbb
           </Card.Body>
         </Card>
       </main>
