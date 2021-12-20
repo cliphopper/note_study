@@ -40,7 +40,6 @@ export default function Home() {
       return <div className={styles.flex_container}>{items}</div>;
   };
 
-
   return (
     <div className={styles.container}>
       <Header title={title} description={description}/>
