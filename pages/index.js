@@ -1,13 +1,14 @@
-import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Button from 'react-bootstrap/Button'
 import styles from '../styles/Home.module.css'
-import Header from './header'
+import CommonHead from './commonHead'
+import HeaderG from './header_g'
+import FooterG from './footer_g'
+import ButtonR from './button_r'
 
 export default function Home() {
   let title ="HOME｜むすび TEST"
-  let description ="ダイレクト転職サービスむすびfor介護"
-  let username ="山田　恵"
+  let description ="ダイレクト転職サービスむすびfor介護のdiscription"
+  let username ="山田 恵"
 
   // test data
   var instDatas = []
@@ -18,6 +19,7 @@ export default function Home() {
   function PlainCard(props) {
     return (
       <div className={styles.plain_card}>
+        <a href="#">
         <div className={styles.img_cont}><img src={instDatas[props.lnum].imgfile} className={styles.fit_image}/></div>
         <div className={styles.txt_cont}>
             {instDatas[props.lnum].name} <br />
@@ -28,6 +30,7 @@ export default function Home() {
                 <li>{instDatas[props.lnum].text3}</li>
             </ul>
         </div>
+        </a>
       </div>
     );
   }
@@ -41,77 +44,60 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
-      <Header title={title} description={description}/>
-
+    <div>
+      <CommonHead title={title} description={description}/>
       <main className={styles.main}>
-        <div className={styles.header}>
-          <h1 className={styles.logo}>★</h1>
-          <div className={styles.username}>
-            <a>{username}</a>
-            <img src="/icon_menu.svg" />
-          </div>
-        </div>
+        <HeaderG username={username} />
 
         <div className={styles.full_container}>
 
-          <div className={styles.search_container}>
-              <p>施設をさがす</p>
-          </div>
+        <section>
+            <div className={styles.search_section}>
+              <div className={styles.search_ttl}><img src="/icon_search.svg" />介護施設を探す</div>
+
+              <table className={styles.search_table}>
+                <tr>
+                    <th>都道府県</th>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <th>募集職種</th>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <th>雇用形態</th>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <th>こだわり条件</th>
+                    <td>
+                    </td>
+                </tr>
+              </table>
+
+              <ButtonR label="検索する" color="green" size="large" url="#"/>
+            </div>
+          </section>
           
-          <div className={styles.card_content}>
-            <ReturnCards />
-          </div>
+          <section>
+            <div className={styles.section_mds}>
+              <img src="/icon_applied.svg" />応募履歴
+            </div>
+            <div className={styles.section_kakomi_g}>
+              <ReturnCards />
+            </div>
+          </section>
+
+
+
         </div>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-            <Button variant="outline-primary">プライマリーボタン</Button>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-            <Button variant="outline-secondary" >セカンダリボタン</Button>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-            <Button variant="success">success</Button>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-            <Button variant="dark">dark</Button>
-          </a>
-        </div>
 
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <FooterG />
     </div>
   )
 }

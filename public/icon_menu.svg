@@ -1,12 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="126.534" height="132.675" viewBox="0 0 126.534 132.675">
-  <g id="レイヤー_2" data-name="レイヤー 2" transform="translate(0.153 0)">
-    <g id="レイヤー_1" data-name="レイヤー 1">
-      <path id="パス_1" data-name="パス 1" d="M19.93,0A19.81,19.81,0,0,0,0,19.64,19.81,19.81,0,0,0,19.93,39.27,19.81,19.81,0,0,0,39.86,19.64,19.81,19.81,0,0,0,19.93,0Zm0,25.68a6,6,0,1,1,6.14-6,6.1,6.1,0,0,1-6.14,6Z" fill="#666"/>
-      <path id="パス_2" data-name="パス 2" d="M53.57,26.43h65.75a6.8,6.8,0,1,0,0-13.59H53.57a6.8,6.8,0,1,0,0,13.59Z" fill="#666"/>
-      <path id="パス_3" data-name="パス 3" d="M19.93,46.7a19.64,19.64,0,1,0,0,39.27,19.64,19.64,0,1,0,0-39.27Zm0,25.68a6,6,0,1,1,6.14-6,6.1,6.1,0,0,1-6.14,6Z" fill="#666"/>
-      <path id="パス_4" data-name="パス 4" d="M119.32,59.54H53.57a6.8,6.8,0,1,0,0,13.59h65.75a6.8,6.8,0,1,0,0-13.59Z" fill="#666"/>
-      <path id="パス_5" data-name="パス 5" d="M19.93,93.4a19.64,19.64,0,1,0,0,39.27,19.64,19.64,0,1,0,0-39.27Zm0,25.68a6,6,0,1,1,6.14-6,6.1,6.1,0,0,1-6.14,6Z" fill="#666"/>
-      <path id="パス_6" data-name="パス 6" d="M119.31,106.24H53.57a6.8,6.8,0,1,0,0,13.59h65.74a6.8,6.8,0,1,0,0-13.59Z" fill="#666"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="31" height="22" viewBox="0 0 31 22">
+  <g id="Menu" transform="translate(-0.213 1.332)">
+    <line id="線_68" data-name="線 68" x2="31" transform="translate(0.213 -0.332)" fill="none" stroke="#fff" stroke-width="2"/>
+    <line id="線_69" data-name="線 69" x2="31" transform="translate(0.213 9.668)" fill="none" stroke="#fff" stroke-width="2"/>
+    <line id="線_74" data-name="線 74" x2="15" transform="translate(0.213 19.668)" fill="none" stroke="#fff" stroke-width="2"/>
   </g>
 </svg>

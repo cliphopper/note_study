@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import 'bootstrap/dist/css/bootstrap.min.css'
-export default function Header(props) {
+export default function CommonHead(props) {
   return (
     <Head>
       <meta charset="utf-8" />
