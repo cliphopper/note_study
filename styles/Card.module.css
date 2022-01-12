@@ -1,0 +1,69 @@
+/* card layout */
+
+.flex_container {
+  width:100%;
+  margin: 10px;
+  display:-webkit-flex;
+  display: flex;
+  flex-direction : row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+
+.plain_card {
+  font-size: 0.8em;
+  background: #fff;
+  border:#eeeeee 1px solid;
+  box-shadow: 1px 1px 5px #ddd;
+  width: 180px;
+  margin: 0 5px 5px 0;
+  display: flex;
+  flex-direction : column;
+  justify-content: space-between;
+  min-width:250px;
+}
+@media screen and (max-width: 479px) {
+  .plain_card {
+    width: 90%;
+  } }
+
+.plain_card a, .plain_card a:visited{
+  color:#01037a;
+  text-decoration:none;
+}
+.plain_card a:hover{
+  color:#051daa;
+}
+
+.img_cont{
+  width: 100%;
+  height: 120px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction : column;
+}
+
+.fit_image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  object-position:bottom;
+}
+
+.txt_cont{
+  margin:10px;
+  font-size: 1.1em;
+  line-height:1.2;
+}
+
+.plain_list {
+  font-size: 0.9em;
+  margin-left: -1.5em;
+  margin-top:5px;
+}
+
+

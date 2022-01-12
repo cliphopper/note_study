@@ -5,6 +5,7 @@ a.btns{
   margin:0 auto;
   display:block;
   width:100%;
+  position:relative;
 }
 a.btns, a.btns:hover, a.btns:visited{
   text-decoration:none;
@@ -26,16 +27,15 @@ a.btns, a.btns:hover, a.btns:visited{
   .btn_greenL:hover {
     background-color: #fff;
     color: #54c640;
-    font-weight:500;
-    border-radius: 30px;
     box-shadow: 0 0 0 2px #54c640;
     box-sizing: border-box;
+    text-decoration:none;
   }
 }
 
 .btn_greenM{
   margin: 5px auto;
-  width: 99%;
+  width: 95%;
   border-radius: 20px;
   text-align:center;
   padding: 3px;
@@ -44,13 +44,35 @@ a.btns, a.btns:hover, a.btns:visited{
   font-size: 1.1em;
   font-weight:400;
   transition : 0.3s;
+  text-decoration:none;
 }
 @media screen and (min-width: 768px) {
   .btn_greenM:hover {
     background-color: #ffffff;
     color: #54c640;
-    border-radius: 20px;
     box-shadow: 0 0 0 2px #54c640;
-    box-sizing: border-box;
+    text-decoration:none;
+  }
+}
+
+.btn_darkM{
+  margin: 5px auto;
+  width: 95%;
+  border-radius: 20px;
+  text-align:center;
+  padding: 3px;
+  background: #4F9536;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight:400;
+  transition : 0.3s;
+  text-decoration:none;
+}
+@media screen and (min-width: 768px) {
+  .btn_darkM:hover {
+    background-color: #ffffff;
+    color: #4F9536;
+    box-shadow: 0 0 0 2px #4F9536;
+    text-decoration:none;
   }
 }

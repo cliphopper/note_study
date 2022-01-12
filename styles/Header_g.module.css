@@ -18,7 +18,7 @@
   flex-direction: row;
 }
 .logo img{
-  height:50px;
+  height:45px;
   width:auto;
   margin:5px 0 0 5px;
 }
@@ -28,7 +28,13 @@
   min-width:180px;
   line-height:1.5;
   margin:10px 0 0 10px;
+  display:block;
 }
+@media screen and (max-width: 479px) {
+  .logo .logoname{
+    display:none;
+  } }
+
 .logo .logoname img{
   height:20px;
   width:auto;
@@ -43,6 +49,7 @@
 .headerRight img{
   width:25px;
   height: auto;
+  margin: 0 5px;
 }
 .headerRight a{
   margin: 0 5px;

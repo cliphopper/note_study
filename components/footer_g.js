@@ -1,29 +1,30 @@
+import Link from 'next/link'
 import styles from '../styles/Footer_g.module.css'
 
-export default function FooterG(props) {
+export default function Footer_g(props) {
 
   return (
     <footer className={styles.footer}>
       <div className={styles.footer1}>
         <section>
-          <div className={styles.footer1_left}>
-            <a href="#">
+          <Link href="/">
+            <a className={styles.footer1_left}>
               <img src="/logoG.png" width="140" height="auto"/><br></br>
               ダイレクト転職サービス<br></br>
               <img src="/logo_musubi_G.png" width="120" height="auto"/><br></br>
               for介護<br></br>
             </a>
-          </div>
+          </Link>
           <div className={styles.footer1_right}>
             <ul>
-              <li><a href="#">最新記事見出し</a></li>
-              <li><a href="#">最新記事見出し</a></li>
-              <li><a href="#">最新記事見出し</a></li>
+              <li key="1"><a href="#">最新記事見出し</a></li>
+              <li key="2"><a href="#">最新記事見出し</a></li>
+              <li key="3"><a href="#">最新記事見出し</a></li>
             </ul>
             <ul>
-              <li><a href="#">最新記事見出し</a></li>
-              <li><a href="#">最新記事見出し</a></li>
-              <li><a href="#">最新記事見出し</a></li>
+              <li key="4"><a href="#">最新記事見出し</a></li>
+              <li key="5"><a href="#">最新記事見出し</a></li>
+              <li key="6"><a href="#">最新記事見出し</a></li>
             </ul>
           </div>
         </section>
