@@ -6,16 +6,16 @@ import ButtonR from '../components/button_r'
 export default function setCards(props) {
 
   /* テスト用jsonファイルから読み込み */
-  const url = './data/data_facility.json'
+  //const url = './data/data_facility.json'
+  const url = 'http://localhost:3000/data/data_facility.json'
   const [data, setData] = useState({ data:[]})
-  const items = []
+  var items = []
 
   fetch(url)
     .then(res=> res.json())
     .then(res=> setData(res))
 
   /* 表示させるidの配列props.selectを参照し、一致したデータだけをPlainCardで描画 */
-  /* for文は、違う方法に置き換えたい。。。 */
   if(props.select){
     data.data.forEach(function( value ) {
       for (let i = 0; i < props.select.length; i++) {
