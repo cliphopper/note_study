@@ -5,7 +5,6 @@ import Layout from '../components/layout'
 import Link from 'next/link'
 import ButtonR from '../components/button_r'
 import SetCards from '../components/setcards'
-import SetCheckbox from  '../components/search_section'
 import SearchTable from '../components/Tables/SearchTable/index'
 import { searchConfig } from '../configs/consts'
 
