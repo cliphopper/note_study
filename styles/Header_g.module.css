@@ -1,16 +1,19 @@
 /* ヘッダー　（緑） */
 
 .header{
-  min-height:60px;
+  position: fixed;
+  z-index:100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background:#54c640;
-  color:#fff;
 }
 .header a, .header a:hover, .header a:visited{
   text-decoration:none;
-  color:#fff;
 }
 
 .logo{
@@ -29,7 +32,13 @@
   line-height:1.5;
   margin:10px 0 0 10px;
   display:block;
+
+  color:#fff;
 }
+.logo .logoname a, .logo .logoname a:hover, .logo .logoname a:visited{
+  color:#fff;
+}
+
 @media screen and (max-width: 479px) {
   .logo .logoname{
     display:none;
@@ -45,6 +54,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-right:5px;
 }
 .headerRight img{
   width:25px;
@@ -53,4 +63,19 @@
 }
 .headerRight a{
   margin: 0 5px;
+}
+.headerRight .username{
+  color:#fff;
+}
+.headerRight a.username, .headerRight a.username:hover, .headerRight a.username:visited{
+  color:#fff;
+}
+
+.droparea{
+  position:absolute;
+  top:60px;
+  right:0;
+  border:#eee;
+  background:#fff;
+  color:#333;
 }

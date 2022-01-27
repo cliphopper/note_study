@@ -1,37 +1,52 @@
 import Link from 'next/link'
 import styles from '../styles/Header_g.module.css'
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 export default function Header_g(props) {
 
   return (
     <div className={styles.header}>
       <h1 className={styles.logo}>
-        <Link href="/">
+        <a href="/">
           <a>
-            <img src="/logoW.png" />
+            <img src="/common_img/logoW.png" />
           </a>
-        </Link>
+        </a>
         <div className={styles.logoname}>
-          <Link href="/">
+          <a href="/">
             <a>
               ダイレクト転職サービス<br></br>
-              <img src="/logo_musubi_W.png" /> for 介護士
+              <img src="/common_img/logo_musubi_W.png" /> for 介護士
             </a>
-          </Link>
+          </a>
         </div>
       </h1>
       <div className={styles.headerRight}>
-        <Link href="#">
-          <a>
+        <Link href="#" >
+          <a className={styles.username}>
             {props.username}
           </a>
         </Link>
         <Link href="#">
           <a>
-            <img src="/icon_mypage.svg" />
+            <img src="/common_img/icon_mypage.svg" />
           </a>
         </Link>
-        <img src="/icon_menu.svg" />
+        
+        <Dropdown>
+          <Dropdown.Toggle id="drop_exe" variant="success">
+            Menu
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu variant="light" >
+            <Dropdown.Item href="#" className={styles.dropmenu}>公式ページトップ</Dropdown.Item>
+            <Dropdown.Item href="#" className={styles.dropmenu}>ご利用方法</Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item href="#" className={styles.dropmenu}>ログアウト</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
       </div>
     </div>
   )
