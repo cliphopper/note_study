@@ -32,7 +32,8 @@ export default function setDm(props) {
       }
     });
   }else{
-    items[0] = "　"
+    //配列が全部空だったら
+    items[0] = "&nbsp;"
   }
 
   return (

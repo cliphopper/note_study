@@ -56,13 +56,22 @@
   border-top:#54c640 8px solid;
 
 }
+
 .search_ttl{
-  background:#d2ffc5;
-  font-size:28px;
-  padding:3px 0;
+  width:100%;
+  padding:0;
+  margin:0;
+  display:flex;
+  justify-content:flex-start;
+  color:#787878;
+  font-size:26px;
 }
 .search_ttl img{
   margin: auto 20px;
+}
+.search_ttl a{
+  color:#787878;
+  font-size:26px;
 }
 
 .search_table{
@@ -104,3 +113,4 @@
 .search_table .category_mds{
   color:#000;
 }
+

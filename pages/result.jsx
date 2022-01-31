@@ -5,10 +5,10 @@ import Layout from '../components/layout'
 import Link from 'next/link'
 import ButtonR from '../components/button_r'
 import SetCards from '../components/setcards'
-import SetDm from '../components/setdm'
 import SearchTable from '../components/Tables/SearchTable/index'
 import { searchConfig } from '../configs/consts'
-import Accordion from 'react-bootstrap/Accordion'
+import Accordion from 'react-bootstrap/Accordion';
+
 
 export default function Home() {
 
@@ -17,28 +17,18 @@ export default function Home() {
   let description ="ダイレクト転職サービスむすびfor介護のdiscription"
   let username ="山田 恵"
 
-  //DMに表示する施設のidとメッセージ
-
-  var dms= [  
-    { id: "f000005", message: "最後に受け取ったメッセージテキスト", newnum:0 },
-    { id: "f000002", message: "未読のメッセージがあります", newnum:1 },
-    { id: "f000003", message: "未読のメッセージがあります", newnum:2 }
-  ]
-
-  //応募履歴に表示する施設のid
+  //検索キーワード
+  var searchkey = ["東京都","介護士"]
+  //検索結果に表示する施設のid
   var fitem1 = ["f000001","f000003","f000004","f000005"]
-  //スカウト履歴に表示する施設のid
-  var fitem2 = ["f000002","f000004"]
-  //お気に入りに表示する施設のid
-  var fitem3 = ["f000003"]
 
   return (
     <Layout title={title} description={description} username={username} >
       <main className={styles.main}>
         <div className={styles.full_container}>
 
-        <section>
-            <Accordion defaultActiveKey="0" alwaysOpen>
+          <section>
+            <Accordion defaultActiveKey="1" >
               <Accordion.Item className={styles.search_section} eventKey="0" >
                 <Accordion.Header>
                   <SearchTitle title="介護施設を探す"></SearchTitle>
@@ -57,48 +47,13 @@ export default function Home() {
           </section>
           
           <section>
-            <div className={styles.section_mds}>
-              <img src="/common_img/icon_dm.svg" />ダイレクトメッセージ
-            </div>
-            <div className={styles.section_kakomi_w}>
-
-              <SetDm select={dms} />
-
-            </div>
-          </section>
-
-          <section>
-            <div className={styles.section_mds}>
-              <img src="/common_img/icon_applied.svg" />応募履歴
-            </div>
+            <ShowSearchKey searchkey ={searchkey} items={fitem1.length} />
+              
             <div className={styles.section_kakomi_g}>
-
               <SetCards select={fitem1} dbtn="false" cbtn="false"/>
-
             </div>
           </section>
 
-          <section>
-            <div className={styles.section_mds}>
-              <img src="/common_img/icon_offer.svg" />スカウト履歴
-            </div>
-            <div className={styles.section_kakomi_w}>
-
-              <SetCards select={fitem2} dbtn="true" cbtn="true"/>
-
-            </div>
-          </section>
-
-          <section>
-            <div className={styles.section_mds}>
-              <img src="/common_img/icon_star.svg" />お気に入り
-            </div>
-            <div className={styles.section_kakomi_w}>
-
-            <SetCards select={fitem3} dbtn="true" cbtn="true"/>
-
-            </div>
-          </section>
 
         </div>
       </main>
@@ -115,4 +70,25 @@ function SearchTitle(props){
       {props.title}
     </div>
   )
+}
+
+//検索結果のタイトルを作成。
+//検索のキーワードと、検索結果件数をpropsに渡す。
+function ShowSearchKey(props){
+  var keys = []
+
+  for (let i = 0; i < props.searchkey.length; i++) {
+    keys.push( props.searchkey[i] )
+    keys.push( "　") 
+  }
+
+  return (
+    <div className={styles.section_mds}>
+      {keys}
+      &nbsp;検索結果&#58;
+      {props.items}
+      &nbsp;件
+    </div>
+  )
+
 }

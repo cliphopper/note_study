@@ -33,6 +33,9 @@ export default function Footer_g(props) {
         <section>
           <div className={styles.bunner_area}> 
           </div>
+          <div className={styles.link_area}>
+            <a href="#">プライバシポリシー</a>　｜　<a href="#">会員規約</a>
+          </div>
           <div className={styles.snsicon_area}>
             <a href="#"><img src="/common_img/snsicon_twitter.svg" width="20" height="auto"/></a>
             <a href="#"><img src="/common_img/snsicon_insta.svg" width="20" height="auto"/></a>
