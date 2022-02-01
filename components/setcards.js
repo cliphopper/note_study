@@ -16,6 +16,7 @@ export default function setCards(props) {
     .then(res=> setData(res))
 
   /* 表示させるidの配列props.selectを参照し、一致したデータだけをPlainCardで描画 */
+  /* これだと、常にid順になってしまう。。 */
   if(props.select){
     data.data.forEach(function( value ) {
       for (let i = 0; i < props.select.length; i++) {
@@ -25,7 +26,8 @@ export default function setCards(props) {
       }
     });
   }else{
-    items[0] = "　"
+    //配列が全部空だったら
+    items[0] = "&nbsp;"
   }
 
   return (
